@@ -5,8 +5,11 @@
   --bg-color: #141519;
 
   --focus-color: #b1976c;
-
   --main-color: #b1976c;
+
+  --image-bg: #1e212a;
+  --box-shadow: 0px 10px 15px -3px #b1976c13;
+  --drop-shadow: 0 0 10px #b9a88e8d;
 
   --transition: 0.5s;
 
@@ -17,14 +20,17 @@
   --gap: 24px;
   --item-gap: 12px;
 
-  --header-height: 45px;
-  --item-padding-top: 10px;
-  --item-padding-left: 12px;
+  --header-height: 135px;
+  --item-padding-top: 15px;
+  --item-padding-left: 18px;
 
   --banner-padding-top: 48px;
   --banner-padding-left: 64px;
 
+  --logo-width: 300px;
+
   --info-card-width: 180px;
+  --product-card-grid: repeat(4, 1fr);
 
   --font-size: 16px;
   --h1-size: 60px;
@@ -41,41 +47,90 @@
     --h2-size: 40px;
     --h3-size: 19px;
 
+    --page-gap: 70px;
+    --gap: 20px;
+    --item-gap: 11px;
+
+    --logo-width: 250px;
+
     --page-padding-left: calc(30px + 1vw);
+
+    --product-card-grid: repeat(4, 1fr);
+
+    --banner-padding-top: 48px;
+    --banner-padding-left: 64px;
+  }
+
+  @media screen and (max-width: 900px) {
+    --product-card-grid: repeat(3, 1fr);
   }
 
   @media screen and (max-width: 768px) {
-    --font-size: 14px;
+    --font-size: 13px;
     --h1-size: 45px;
     --h2-size: 34px;
     --h3-size: 18px;
 
+    --page-gap: 60px;
+    --gap: 18px;
+    --item-gap: 10px;
+
     --page-padding-top: 24px;
     --page-padding-left: 36px;
+
+    --logo-width: 225px;
+    --product-card-grid: repeat(2, 1fr);
+
+    --banner-padding-top: 36px;
+    --banner-padding-left: 48px;
   }
 
   @media screen and (max-width: 480px) {
-    --font-size: 14px;
+    --font-size: 12px;
     --h1-size: 30px;
     --h2-size: 20px;
     --h3-size: 17px;
 
+    --page-gap: 55px;
+    --gap: 14px;
+    --item-gap: 9px;
+
     --page-padding-top: 12px;
     --page-padding-left: 24px;
 
     --info-card-width: 45%;
+    --product-card-grid: repeat(1, 1fr);
+
+    --logo-width: 200px;
+    --item-padding-top: 12px;
+    --item-padding-left: 14px;
+
+    --banner-padding-top: 24px;
+    --banner-padding-left: 36px;
   }
 
   @media screen and (max-width: 320px) {
-    --font-size: 14px;
-    --h1-size: 30px;
+    --font-size: 12px;
+    --h1-size: 25px;
     --h2-size: 20px;
     --h3-size: 16px;
+
+    --page-gap: 50px;
+    --gap: 12px;
+    --item-gap: 8px;
 
     --page-padding-top: 12px;
     --page-padding-left: 24px;
 
     --info-card-width: 45%;
+    --product-card-grid: repeat(1, 1fr);
+
+    --logo-width: 175px;
+    --item-padding-top: 10px;
+    --item-padding-left: 12px;
+
+    --banner-padding-top: 12px;
+    --banner-padding-left: 18px;
   }
 }
 
@@ -112,6 +167,13 @@ button {
   padding: var(--item-padding-top) var(--item-padding-left);
 
   text-transform: uppercase;
+  width: fit-content;
+  transition: var(--transition);
+}
+
+.little__button {
+  padding: calc(var(--item-padding-top) / 2) calc(var(--item-padding-left) / 2);
+
   width: fit-content;
   transition: var(--transition);
 }
@@ -188,4 +250,9 @@ svg {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.main_border {
+  border-bottom: 2px solid var(--main-color);
+  width: calc(20px + 5%);
 }

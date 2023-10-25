@@ -1,0 +1,103 @@
+.page4 {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: var(--gap);
+}
+
+.page4 .category__list {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page4 .category__list button {
+  border: none;
+}
+
+.page4 .category__list .active {
+  color: var(--main-color);
+}
+
+.page4 .category__list .active:hover {
+  color: var(--font-color);
+}
+
+.page4 .products {
+  display: grid;
+  grid-template-columns: var(--product-card-grid);
+  grid-template-rows: 1fr;
+  grid-column-gap: var(--item-gap);
+  grid-row-gap: var(--item-gap);
+}
+
+.page4 .products .product__card {
+  min-width: var(--product-card-width);
+  width: 100%;
+  height: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--item-gap);
+}
+
+.page4 .products .product__card .product__image {
+  padding: var(--item-padding-top);
+  height: 75%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--image-bg);
+}
+
+.page4 .products .product__card .product__image img {
+  height: 100%;
+  object-fit: cover;
+
+  filter: drop-shadow(var(--drop-shadow));
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.page4 .products .product__card .product__image img:hover {
+  scale: 1.1;
+}
+
+.page4 .products .product__card .product__desc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-gap);
+}
+
+.page4 .products .product__card:hover .product__desc .price {
+  display: none;
+}
+
+.page4 .products .product__card:hover .product__desc .product__buttons {
+  display: flex;
+}
+
+.page4 .products .product__card .product__desc .product__buttons {
+  display: none;
+  gap: var(--item-gap);
+}
+
+.page4 .products .product__card .product__desc .product__buttons button {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--item-gap) / 2)
+}
+.page4 .products .product__card .product__desc .product__buttons button svg {
+  fill: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}

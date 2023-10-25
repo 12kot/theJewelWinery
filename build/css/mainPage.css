@@ -12,11 +12,11 @@
       to bottom,
       rgba(107, 108, 104, 0.4),
       rgb(65, 69, 67, 0.5),
-      rgb(47, 52, 53, 0.55),
-      rgb(32, 37, 39, 0.6),
-      #141519
+      rgb(47, 52, 53, 0.6),
+      rgb(32, 37, 39, 0.5),
+      rgb(20, 21, 25, 1)
     ),
-    url("assets/vineyBanner.jpg") no-repeat center;
+    url("assets/vineyBanner1.jpg") no-repeat center;
   background-size: cover;
 
   @media screen and (max-width: 1023px) {

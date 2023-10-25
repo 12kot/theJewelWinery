@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   height: fit-content;
-  padding-bottom: 0;
+  gap: var(--gap);
 }
 
 .about {
   align-self: center;
-  min-height: 40vh;
+  height: fit-content;
+  min-height: 20vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,13 +20,6 @@
   align-items: center;
   flex-direction: column;
   gap: var(--gap);
-
-  margin-bottom: var(--item-padding-top);
-}
-
-.about_text_container span {
-  border-bottom: 2px solid var(--main-color);
-  width: calc(10px + 10%);
 }
 
 .about_cards {
@@ -42,8 +36,9 @@
 }
 
 .about_card {
-  width: var(--info-card-width);
-
+  min-width: var(--info-card-width);
+  width: 23%;
+  
   display: flex;
   align-items: center;
   flex-direction: column;
