@@ -36,12 +36,16 @@
   --h1-size: 60px;
   --h2-size: 40px;
   --h3-size: 20px;
+}
 
-  @media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
+  :root {
     --page-padding-left: calc(80px + 3vw);
   }
+}
 
-  @media screen and (max-width: 1023px) {
+@media (max-width: 1023px) {
+  :root {
     --font-size: 14px;
     --h1-size: 60px;
     --h2-size: 40px;
@@ -60,12 +64,16 @@
     --banner-padding-top: 48px;
     --banner-padding-left: 64px;
   }
+}
 
-  @media screen and (max-width: 900px) {
+@media (max-width: 900px) {
+  :root {
     --product-card-grid: repeat(3, 1fr);
   }
+}
 
-  @media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  :root {
     --font-size: 13px;
     --h1-size: 45px;
     --h2-size: 34px;
@@ -84,8 +92,10 @@
     --banner-padding-top: 36px;
     --banner-padding-left: 48px;
   }
+}
 
-  @media screen and (max-width: 480px) {
+@media (max-width: 480px) {
+  :root {
     --font-size: 12px;
     --h1-size: 30px;
     --h2-size: 20px;
@@ -108,8 +118,10 @@
     --banner-padding-top: 24px;
     --banner-padding-left: 36px;
   }
+}
 
-  @media screen and (max-width: 320px) {
+@media (max-width: 320px) {
+  :root {
     --font-size: 12px;
     --h1-size: 25px;
     --h2-size: 20px;

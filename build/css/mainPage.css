@@ -16,10 +16,12 @@
       rgb(32, 37, 39, 0.5),
       rgb(20, 21, 25, 1)
     ),
-    url("assets/vineyBanner1.jpg") no-repeat center;
+    url("../assets/vineyBanner1.jpg") no-repeat center;
   background-size: cover;
+}
 
-  @media screen and (max-width: 1023px) {
+@media (max-width: 1023px) {
+  .page1 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -32,12 +34,16 @@
   flex-direction: column;
   justify-content: center;
   gap: var(--gap);
+}
 
-  @media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  .info {
     width: 80%;
   }
+}
 
-  @media screen and (max-width: 480px) {
+@media (max-width: 480px) {
+  .info {
     width: 100%;
   }
 }

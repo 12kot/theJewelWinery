@@ -31,11 +31,13 @@
   flex-grow: 1;
   max-width: 35%;
   min-width: 35%;
-  
+
   overflow: hidden;
   position: relative;
+}
 
-  @media screen and (max-width: 850px) {
+@media (max-width: 850px) {
+  .category_card_img {
     max-width: 100%;
     width: 100%;
     position: absolute;
@@ -47,8 +49,10 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
 
-  @media screen and (max-width: 850px) {
+@media (max-width: 850px) {
+  .category_card_img img {
     filter: brightness(0.4) sepia(30%);
   }
 }
@@ -69,8 +73,10 @@
   justify-content: center;
 
   gap: var(--gap);
+}
 
-  @media screen and (max-width: 850px) {
+@media (max-width: 850px) {
+  .category_card_info {
     background-color: #1e212a59;
   }
 }

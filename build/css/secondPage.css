@@ -29,8 +29,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--item-gap);
+}
 
-  @media screen and (max-width: 1023px) {
+@media (max-width: 1023px) {
+  .about_cards {
     justify-content: center;
   }
 }
@@ -38,7 +40,7 @@
 .about_card {
   min-width: var(--info-card-width);
   width: 23%;
-  
+
   display: flex;
   align-items: center;
   flex-direction: column;
