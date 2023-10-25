@@ -1,0 +1,14 @@
+.header {
+  border: 1px solid red;
+  height: var(--header-height);
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  z-index: 4000;
+}
+
+.footer {
+  border: 1px solid red;
+  height: 45px;
+}

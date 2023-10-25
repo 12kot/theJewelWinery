@@ -1,0 +1,191 @@
+:root {
+  --font-color: white;
+  --negative-color: #141519;
+  --second-color: #828282;
+  --bg-color: #141519;
+
+  --focus-color: #b1976c;
+
+  --main-color: #b1976c;
+
+  --transition: 0.5s;
+
+  --page-padding-top: 36px;
+  --page-padding-left: calc(140px + 6vw);
+
+  --page-gap: 80px;
+  --gap: 24px;
+  --item-gap: 12px;
+
+  --header-height: 45px;
+  --item-padding-top: 10px;
+  --item-padding-left: 12px;
+
+  --banner-padding-top: 48px;
+  --banner-padding-left: 64px;
+
+  --info-card-width: 180px;
+
+  --font-size: 16px;
+  --h1-size: 60px;
+  --h2-size: 40px;
+  --h3-size: 20px;
+
+  @media screen and (max-width: 1200px) {
+    --page-padding-left: calc(80px + 3vw);
+  }
+
+  @media screen and (max-width: 1023px) {
+    --font-size: 14px;
+    --h1-size: 60px;
+    --h2-size: 40px;
+    --h3-size: 19px;
+
+    --page-padding-left: calc(30px + 1vw);
+  }
+
+  @media screen and (max-width: 768px) {
+    --font-size: 14px;
+    --h1-size: 45px;
+    --h2-size: 34px;
+    --h3-size: 18px;
+
+    --page-padding-top: 24px;
+    --page-padding-left: 36px;
+  }
+
+  @media screen and (max-width: 480px) {
+    --font-size: 14px;
+    --h1-size: 30px;
+    --h2-size: 20px;
+    --h3-size: 17px;
+
+    --page-padding-top: 12px;
+    --page-padding-left: 24px;
+
+    --info-card-width: 45%;
+  }
+
+  @media screen and (max-width: 320px) {
+    --font-size: 14px;
+    --h1-size: 30px;
+    --h2-size: 20px;
+    --h3-size: 16px;
+
+    --page-padding-top: 12px;
+    --page-padding-left: 24px;
+
+    --info-card-width: 45%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+
+  font-family: "Rufina", serif;
+}
+
+div {
+  display: block;
+}
+
+body {
+  width: 100%;
+  min-width: 280px;
+  height: fit-content;
+  margin: 0;
+
+  font-size: var(--font-size);
+  color: var(--font-color);
+
+  background-color: var(--bg-color);
+}
+
+button {
+  border: 2px solid var(--main-color);
+  padding: var(--item-padding-top) var(--item-padding-left);
+
+  text-transform: uppercase;
+  width: fit-content;
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--focus-color);
+}
+
+b {
+  color: var(--main-color);
+}
+
+button,
+a,
+input {
+  /* border: 0; */
+  background-color: initial;
+  font-weight: bold;
+  color: var(--font-color);
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+a,
+a:active,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+h4 {
+  font-size: var(--h4-size);
+}
+
+svg {
+  width: var(--svg-width);
+}
+
+.second-color {
+  color: var(--second-color);
+}
+
+::-webkit-scrollbar {
+  /* width: var(--scrollbar-width);
+    height: var(--scrollbar-heigth); */
+}
+
+::-webkit-scrollbar-thumb {
+  /* border-radius: var(--scrollbar-radius);
+    background-color: var(--scroll-color); */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

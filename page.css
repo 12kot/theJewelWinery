@@ -1,0 +1,8 @@
+.page {
+  position: relative;
+  height: fit-content;
+  padding: calc(var(--page-padding-top) + var(--header-height))
+    var(--page-padding-left) var(--page-padding-top);
+
+  width: 100%;
+}

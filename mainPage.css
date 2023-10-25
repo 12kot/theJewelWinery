@@ -1,0 +1,71 @@
+.page1 {
+  height: 100vh !important;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+
+  position: relative;
+
+  background: linear-gradient(
+      to bottom,
+      rgba(107, 108, 104, 0.4),
+      rgb(65, 69, 67, 0.5),
+      rgb(47, 52, 53, 0.55),
+      rgb(32, 37, 39, 0.6),
+      #141519
+    ),
+    url("assets/vineyBanner.jpg") no-repeat center;
+  background-size: cover;
+
+  @media screen and (max-width: 1023px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.info {
+  height: 50%;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap);
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.info__head {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.info__description {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: var(--gap);
+  grid-row-gap: var(--gap);
+}
+
+.border {
+  grid-area: 1 / 1 / 2 / 2;
+  border-top: 2px solid var(--main-color);
+  margin-top: 7px;
+}
+
+.content {
+  grid-area: 1 / 2 / 2 / 4;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
