@@ -11,6 +11,14 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
+  
   gap: var(--item-gap);
+  flex-wrap: wrap;
+}
+
+.navigation ul li {
+  height: 100%;
+}
+.navigation ul li a {
+  height: 100%;
 }
