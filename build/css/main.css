@@ -10,6 +10,7 @@
   --image-bg: #1e212a;
   --box-shadow: 0px 10px 15px -3px #af986c13;
   --drop-shadow: 0 0 10px #b9a88e8d;
+  --border-color: #82828272;
 
   --transition: 0.5s;
 
@@ -201,6 +202,7 @@ button {
   text-transform: uppercase;
   width: fit-content;
   transition: var(--transition);
+  font-weight: bold;
 }
 
 .little__button {
@@ -222,10 +224,15 @@ b {
 button,
 a,
 input {
-  /* border: 0; */
   background-color: initial;
-  font-weight: bold;
   color: var(--font-color);
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background-color: var(--image-bg);
+  font-weight: bold;
 }
 
 button,
@@ -288,4 +295,9 @@ svg {
 .main_border {
   border-bottom: 2px solid var(--main-color);
   width: calc(20px + 5%);
+}
+
+.big__border {
+  border-top: 1px solid var(--border-color);
+  width: 100%;
 }

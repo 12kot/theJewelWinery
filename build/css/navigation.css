@@ -1,0 +1,16 @@
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-gap);
+
+  padding: calc(var(--gap)) var(--page-padding-left) 0;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  gap: var(--item-gap);
+}
