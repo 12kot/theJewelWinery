@@ -59,11 +59,7 @@
 
 .image {
   grid-area: 1 / 1 / 2 / 4;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.15) 0%,
-    var(--image-bg) 100%
-  );
+  background: var(--image-bg-gradient);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +71,6 @@
   height: 80%;
   object-fit: cover;
 
-  filter: drop-shadow(var(--drop-shadow));
   transition: var(--transition);
   cursor: pointer;
 }

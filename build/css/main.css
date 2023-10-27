@@ -11,8 +11,13 @@
   --scrollbar-color: #c4af8a;
 
   --image-bg: #1e212a;
+  --image-bg-gradient: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    var(--image-bg) 100%
+  );
   --box-shadow: 0px 10px 15px -3px #af986c13;
-  --drop-shadow: 0 0 10px #b9a88e8d;
+  --drop-shadow: 0 0 15px #b9a88e8d;
   --border-color: #82828272;
 
   --transition: 0.5s;

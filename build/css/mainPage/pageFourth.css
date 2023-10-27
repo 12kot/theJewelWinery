@@ -52,14 +52,13 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--image-bg);
+  background: var(--image-bg-gradient);
 }
 
 .page4 .products .product__card .product__image img {
   height: 100%;
   object-fit: cover;
 
-  filter: drop-shadow(var(--drop-shadow));
   transition: var(--transition);
   cursor: pointer;
 }
