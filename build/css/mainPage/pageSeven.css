@@ -43,6 +43,10 @@
   margin-top: calc(var(--page-padding-top));
 }
 
+.page7 .back_to_top:hover svg {
+  fill: var(--main-color)!important;
+}
+
 .page7 .back_to_top svg {
   display: flex;
   justify-content: center;

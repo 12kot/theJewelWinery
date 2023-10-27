@@ -273,8 +273,13 @@ a:active {
   scale: 0.98;
 }
 
-a:hover {
-  opacity: 0.8;
+a:hover, a:hover svg {
+  color: var(--main-color);
+  fill: var(--main-color);
+}
+
+svg {
+  transition: var(--transition);
 }
 
 ul {

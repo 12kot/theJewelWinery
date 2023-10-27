@@ -100,6 +100,11 @@
 .product__buttons a:hover {
   opacity: 1;
   background-color: var(--main-color);
+  color: var(--font-color);
+}
+
+.product__buttons a:hover svg {
+  fill: var(--fint-color)!important;
 }
 
 .product__buttons button svg {
