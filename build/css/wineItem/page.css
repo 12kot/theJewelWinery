@@ -1,0 +1,140 @@
+.header {
+  position: absolute;
+  top: var(--banner-padding-top);
+  left: var(--banner-padding-left); 
+  height: var(--logo-width-small);
+  z-index: 4000;
+}
+
+.header a {
+  max-height: 100%;
+  position: relative;
+}
+
+.header a img {
+  height: var(--logo-width-small);
+  object-fit: cover;
+}
+
+.page {
+  position: relative;
+  height: 100vh;
+  /* padding: calc(var(--page-padding-top)) var(--page-padding-left)
+    var(--page-padding-top); */
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: var(--gap);
+  grid-row-gap: var(--gap);
+}
+
+@media (max-width: 768px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 0 !important;
+  }
+
+  .image {
+    height: 70vh !important;
+  }
+
+  .content {
+    height: fit-content !important;
+    padding: calc(var(--page-padding-top)) var(--item-padding-left) !important;
+  }
+
+  .buttons {
+    width: 100% !important;
+  }
+
+  .buttons,
+  .link {
+    width: 100% !important;
+  }
+}
+
+.image {
+  grid-area: 1 / 1 / 2 / 4;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 0%,
+    var(--image-bg) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image img {
+  height: 80%;
+  object-fit: cover;
+
+  filter: drop-shadow(var(--drop-shadow));
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.content {
+  grid-area: 1 / 4 / 2 / 6;
+  padding: calc(var(--page-padding-top) * 3) var(--item-padding-left);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-gap);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-gap);
+  width: fit-content;
+}
+
+.button {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--item-gap) / 2);
+  width: 100%;
+}
+
+.button svg {
+  fill: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+
+.links {
+  display: flex;
+  gap: var(--item-gap);
+}
+
+.links .link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links .link a {
+  padding: calc(var(--item-padding-top) / 2) var(--item-padding-left);
+}
+
+.link__border {
+  border-bottom: 2px solid var(--border-color);
+  width: 60%;
+}
