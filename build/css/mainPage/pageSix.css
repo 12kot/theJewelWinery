@@ -48,7 +48,7 @@
 }
 
 .blog__date {
-  opacity: 0.8;
+  color: var(--second-font-color)!important
 }
 
 .page6 .big__border {
