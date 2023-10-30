@@ -215,7 +215,7 @@ body {
   background-color: var(--bg-color);
 }
 
-button {
+button, .linkToButton {
   border: 2px solid var(--main-color);
   padding: var(--item-padding-top) var(--item-padding-left);
 
@@ -223,6 +223,7 @@ button {
   width: fit-content;
   transition: var(--transition);
   font-weight: bold;
+  font-size: var(--font-size);
 }
 
 .little__button {
@@ -232,8 +233,9 @@ button {
   transition: var(--transition);
 }
 
-button:hover {
+button:hover, .linkToButton:hover {
   background-color: var(--focus-color);
+  color: var(--font-color);
 }
 
 b {
