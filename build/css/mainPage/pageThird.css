@@ -98,3 +98,16 @@
   flex-direction: column;
   gap: var(--gap);
 }
+
+.product_description ul li {
+  display: flex;
+  gap: var(--item-gap);
+}
+
+.product_description ul li svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 20px;
+  fill: var(--main-color)
+}

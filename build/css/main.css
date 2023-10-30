@@ -37,7 +37,7 @@
   --banner-padding-left: 64px;
 
   --logo-width: 300px;
-  --logo-width-small: 50px;
+  --logo-width-small: 47px;
 
   --info-card-width: 180px;
   --product-card-grid: repeat(4, 1fr);
@@ -75,7 +75,7 @@
     --item-gap: 11px;
 
     --logo-width: 250px;
-    --logo-width-small: 45px;
+    --logo-width-small: 35px;
 
     --page-padding-left: calc(30px + 1vw);
 
@@ -111,7 +111,7 @@
     --page-padding-left: 36px;
 
     --logo-width: 225px;
-    --logo-width-small: 40px;
+    --logo-width-small: 35px;
 
     --product-card-grid: repeat(2, 1fr);
 
@@ -142,7 +142,7 @@
     --product-card-grid: repeat(1, 1fr);
 
     --logo-width: 200px;
-    --logo-width-small: 35px;
+    --logo-width-small: 30px;
 
     --item-padding-top: 12px;
     --item-padding-left: 14px;
@@ -175,7 +175,7 @@
     --product-card-grid: repeat(1, 1fr);
 
     --logo-width: 175px;
-    --logo-width-small: 35px;
+    --logo-width-small: 28px;
     --item-padding-top: 10px;
     --item-padding-left: 12px;
 

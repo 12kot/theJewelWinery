@@ -2,7 +2,7 @@
   padding: 0;
   margin: var(--page-padding-top) 0;
 
-  max-height: 65vh;
+  max-height: 550px;
   height: 65vh;
 
   overflow: hidden;
@@ -65,7 +65,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: var(--gap);
 }
 
@@ -92,8 +92,9 @@
   height: var(--avatar-size-small);
   object-fit: cover;
   filter: brightness(0.6);
+  cursor: pointer;
 
-  transition: var(--transition);
+  /* transition: var(--transition); */
 }
 
 @media (max-width: 850px) {
@@ -106,10 +107,10 @@
   filter: brightness(1) !important;
 }
 
-.review__avatar:nth-child(1) {
+.review__active  {
   width: var(--avatar-size) !important;
   height: var(--avatar-size) !important;
-  filter: brightness(1.3) !important;
+  filter: brightness(1.1) !important;
 }
 
 .page5 .review__content .review .review__name {
