@@ -104,7 +104,7 @@
 }
 
 .product__buttons a:hover svg {
-  fill: var(--fint-color)!important;
+  fill: var(--font-color)!important;
 }
 
 .product__buttons button svg {
