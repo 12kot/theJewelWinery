@@ -37,3 +37,9 @@ const setActive = (activeRef, parentRef, handleClass) => {
     }
   }
 };
+
+const scrollToElement = (id) => {
+  console.log(id)
+  const node = document.getElementById(id);
+  if (id) id.scrollIntoView({ block: "start", behavior: "smooth" });
+};

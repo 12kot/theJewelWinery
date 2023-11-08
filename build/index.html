@@ -12,27 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Rufina&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyDeT6Lai6Ig8srd294z6Md4jRr6PQAtCGo",
-        authDomain: "the-jewel-wine.firebaseapp.com",
-        projectId: "the-jewel-wine",
-        storageBucket: "the-jewel-wine.appspot.com",
-        messagingSenderId: "380969922246",
-        appId: "1:380969922246:web:a7098c58cc144c6ae1f1c7",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-    </script>
-    <script src="./js/scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/mainPage/header.css" />
     <link rel="stylesheet" type="text/css" href="css/mainPage/page.css" />
@@ -52,7 +33,7 @@
       <img class="header__logo" src="assets/logo.png" />
     </header>
 
-    <main class="page page1" id="">
+    <main class="page page1" id="main">
       <section class="info">
         <div class="info__head">
           <p><b>EXELENT WINE COLLECTION</b></p>
@@ -65,7 +46,7 @@
               We introduse exelent collection of white and red wines.<br />Feel
               the scent of sun and happiness.
             </p>
-            <a href="#philosophy" class="linkToButton">DISCOVER MORE</a>
+            <a onclick="scrollToElement(philosophy)" class="linkToButton">DISCOVER MORE</a>
           </div>
         </div>
       </section>
@@ -73,12 +54,12 @@
 
     <main class="page page2" id="philosophy">
       <section class="about">
-        <div class="about_text_container">
+        <div class="about_text_container" data-aos="zoom-in" data-aos-offset="20">
           <h2>Winemaking Philosophy</h2>
           <span class="main_border"></span>
         </div>
         <div class="about_cards">
-          <div class="about_card">
+          <div class="about_card" data-aos="fade-up">
             <?xml version="1.0" ?><svg
               viewBox="0 0 512 512"
               xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +102,7 @@
               The Jewel winery founded by Nikitosha focuses on local grapes.
             </p>
           </div>
-          <div class="about_card">
+          <div class="about_card" data-aos="fade-up" data-aos-delay="50">
             <?xml version="1.0" ?><svg
               viewBox="0 0 512 512"
               xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +128,7 @@
               high-end.
             </p>
           </div>
-          <div class="about_card">
+          <div class="about_card" data-aos="fade-up" data-aos-delay="100">
             <?xml version="1.0" ?><svg
               viewBox="0 0 512 512"
               xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +145,7 @@
               handcrafted wines.
             </p>
           </div>
-          <div class="about_card">
+          <div class="about_card" data-aos="fade-up" data-aos-delay="150">
             <?xml version="1.0" ?><svg
               viewBox="0 0 512 512"
               xmlns="http://www.w3.org/2000/svg"
@@ -191,10 +172,10 @@
 
     <main class="page page3 category_cards">
       <div class="category_card">
-        <div class="category_card_img">
+        <div class="category_card_img" data-aos="fade-right">
           <img src="./assets/whiteWine.jpg" />
         </div>
-        <div class="category_card_info">
+        <div class="category_card_info" data-aos="fade-left">
           <header class="product_header">
             <p><b>SINCE 2010</b></p>
             <h2>Perfect White Wines</h2>
@@ -328,15 +309,15 @@
                 <p>Riesling</p>
               </li>
             </ul>
-            <a href="#products" class="linkToButton">SHOP NOW</a>
+            <a onclick="scrollToElement(products)" class="linkToButton">SHOP NOW</a>
           </div>
         </div>
       </div>
       <div class="category_card reverse">
-        <div class="category_card_img">
+        <div class="category_card_img" data-aos="fade-left">
           <img src="./assets/redWine.jpg" />
         </div>
-        <div class="category_card_info">
+        <div class="category_card_info" data-aos="fade-right">
           <header class="product_header">
             <p><b>SINCE 2010</b></p>
             <h2>Exelent Red Wines</h2>
@@ -470,27 +451,27 @@
                 <p>Merlot</p>
               </li>
             </ul>
-            <a href="#products" class="linkToButton">SHOP NOW</a>
+            <a onclick="scrollToElement(products)" class="linkToButton">SHOP NOW</a>
           </div>
         </div>
       </div>
     </main>
 
     <main class="page page4" id="products">
-      <section>
+      <section data-aos="zoom-in" data-aos-offset="20">
         <div class="about_text_container">
           <h2>Our Products</h2>
           <span class="main_border"></span>
         </div>
       </section>
       <section class="category__list">
-        <button class="active">ALL</button>
-        <button>RED WINES</button>
-        <button>WHITE WINES</button>
-        <button>ROSE WINES</button>
+        <button class="active" data-aos="zoom-in">ALL</button>
+        <button data-aos="zoom-in" data-aos-delay="50">RED WINES</button>
+        <button data-aos="zoom-in" data-aos-delay="100">WHITE WINES</button>
+        <button data-aos="zoom-in" data-aos-delay="150">ROSE WINES</button>
       </section>
       <section class="products">
-        <div class="product__card">
+        <div class="product__card" data-aos="fade-up">
           <div class="product__image">
             <img src="assets/taita.png" />
           </div>
@@ -527,7 +508,7 @@
             </div>
           </div>
         </div>
-        <div class="product__card">
+        <div class="product__card" data-aos="fade-up" data-aos-delay="50">
           <div class="product__image">
             <img src="assets/chianti-zonin.png" />
           </div>
@@ -564,7 +545,7 @@
             </div>
           </div>
         </div>
-        <div class="product__card">
+        <div class="product__card" data-aos="fade-up" data-aos-delay="100">
           <div class="product__image">
             <img src="assets/los-haroldos.png" />
           </div>
@@ -601,7 +582,7 @@
             </div>
           </div>
         </div>
-        <div class="product__card">
+        <div class="product__card" data-aos="fade-up" data-aos-delay="150">
           <div class="product__image">
             <img src="assets/barolo.png" />
           </div>
@@ -644,33 +625,33 @@
     <main class="page page5">
       <img class="review__banner" src="assets/reviewBanner.jpeg" />
       <section class="review__content">
-        <div class="review">
+        <div class="review" data-aos="zoom-in" data-aos-offset="20">
           <h2 class="review__header">What Get People Saying</h2>
           <div class="review__avatars" id="reviews">
-            <img
+            <img data-aos="fade-up"
               class="review__avatar review__active"
               src="assets/peopleAvatar2.jpg"
               id="review0"
               onclick="changeReview(0)"
             />
-            <img
+            <img data-aos="fade-up" data-aos-delay="50"
               class="review__avatar"
               src="assets/peopleAvatar1.jpg"
               id="review1"
               onclick="changeReview(1)"
             />
-            <img
+            <img data-aos="fade-up" data-aos-delay="100"
               class="review__avatar"
               src="assets/peopleAvatar3.jpg"
               id="review2"
               onclick="changeReview(2)"
             />
           </div>
-          <div class="review__name">
+          <div class="review__name" data-aos="fade-up">
             <p><b id="reviewName">Ekaterina Kuznecova</b></p>
             <p id="reviewWork" class="review__nameWork">Designer, London</p>
           </div>
-          <div class="review__text">
+          <div class="review__text" data-aos="fade-up">
             <blockquote id="reviewText">
               The Jewel is a luxurious wine with a complex flavor and a long
               finish. It is a blend of three of the world's most famous grapes,
@@ -680,9 +661,9 @@
             </blockquote>
           </div>
           <div class="review__select" id="review__select">
-            <span class="circle active" id="select0"></span>
-            <span class="circle" id="select1"></span>
-            <span class="circle" id="select2"></span>
+            <span class="circle active" id="select0" data-aos="fade-up"></span>
+            <span class="circle" id="select1" data-aos="fade-up" data-aos-delay="50"></span>
+            <span class="circle" id="select2" data-aos="fade-up" data-aos-delay="100"></span>
           </div>
         </div>
       </section>
@@ -690,28 +671,28 @@
 
     <main class="page page6">
       <section>
-        <div class="about_text_container">
+        <div class="about_text_container" data-aos="zoom-in" data-aos-offset="20">
           <h2>Jewel Blog</h2>
           <span class="main_border"></span>
         </div>
       </section>
       <section class="blog__items">
-        <a href="blog/blog-history.html" class="blog__item">
+        <a href="blog/blog-history.html" class="blog__item" data-aos="fade-up">
           <img class="blog__img" src="assets/blog1.jpg" />
           <p class="blog__name">The History Of The Appearance Of Jewel Wine</p>
           <p class="blog__date">January 15 2023</p>
         </a>
-        <a href="blog/How-To-Choose-A-Quality-Wine.html" class="blog__item">
+        <a href="blog/How-To-Choose-A-Quality-Wine.html" class="blog__item" data-aos="fade-up" data-aos-delay="50">
           <img class="blog__img" src="assets/blog2.jpg" />
           <p class="blog__name">How To Choose A Quality Wine</p>
           <p class="blog__date">May 21 2023</p>
         </a>
-        <a href="blog/Daily-Wine-News-In-Favor-of-Reds.html" class="blog__item">
+        <a href="blog/Daily-Wine-News-In-Favor-of-Reds.html" class="blog__item" data-aos="fade-up" data-aos-delay="100">
           <img class="blog__img" src="assets/blog3.jpg" />
           <p class="blog__name">Daily Wine News: In Favor of Reds</p>
           <p class="blog__date">February 08 2023</p>
         </a>
-        <a
+        <a data-aos="fade-up" data-aos-delay="150"
           href="blog/Good-Barolo-Comes-To-Those-Who-Wait.html"
           class="blog__item"
         >
@@ -724,18 +705,18 @@
     </main>
 
     <main class="page page7">
-      <section class="text__container">
+      <section class="text__container" data-aos="zoom-in" data-aos-offset="20">
         <h2>Subscribe for newsletter</h2>
         <p>
           Get updates by subscribe our weekly newsletter to receive the latest
           news, events & promotions
         </p>
       </section>
-      <div class="subscribe">
+      <div class="subscribe" data-aos="zoom-in">
         <input placeholder="Enter your email" type="email" />
         <button>subscribe</button>
       </div>
-      <a class="back_to_top" href="#">
+      <a class="back_to_top" onclick="scrollToElement(main)" class="subscribe" data-aos="zoom-in">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="24"
@@ -748,25 +729,25 @@
       </a>
     </main>
 
-    <nav class="navigation">
+    <nav class="navigation" data-aos="zoom-in">
       <span class="big__border"></span>
       <ul>
-        <li><a href="#">HOME</a></li>
-        <li>
+        <li><a href="#" data-aos="zoom-in">HOME</a></li>
+        <li data-aos="zoom-in" data-aos-delay="50">
           <a href="https://edelivery-00.web.app/" target="_blank"
             >ONLINE STORE</a
           >
         </li>
-        <li><a href="./blog/blog.html">OUR BLOG</a></li>
-        <li><a href="./promotion.hmtl" target="_blank">PROMOTION</a></li>
-        <li><a href="./privacy.html">PRIVACY POLICY</a></li>
-        <li><a href="./termstouse.html">TERMS TO USE</a></li>
-        <li><a href="./sitemap.html">SITEMAP</a></li>
+        <li data-aos="zoom-in" data-aos-delay="100"><a href="./blog/blog.html">OUR BLOG</a></li>
+        <li data-aos="zoom-in" data-aos-delay="150"><a href="./promotion.hmtl" target="_blank">PROMOTION</a></li>
+        <li data-aos="zoom-in" data-aos-delay="200"><a href="./privacy.html">PRIVACY POLICY</a></li>
+        <li data-aos="zoom-in" data-aos-delay="250"><a href="./termstouse.html">TERMS TO USE</a></li>
+        <li data-aos="zoom-in" data-aos-delay="300"><a href="./sitemap.html">SITEMAP</a></li>
       </ul>
       <span class="big__border"></span>
     </nav>
 
-    <footer class="footer">
+    <footer class="footer" data-aos="zoom-in">
       <div class="footer__item footer__logo">
         <img src="assets/logo.png" />
       </div>
@@ -1008,4 +989,35 @@
       </div>
     </footer>
   </body>
+
+  <script type="module">
+    AOS.init({
+      offset: 30,
+      duration: 300,
+      easing: "ease",
+      once: false
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/scripts.js"></script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDeT6Lai6Ig8srd294z6Md4jRr6PQAtCGo",
+      authDomain: "the-jewel-wine.firebaseapp.com",
+      projectId: "the-jewel-wine",
+      storageBucket: "the-jewel-wine.appspot.com",
+      messagingSenderId: "380969922246",
+      appId: "1:380969922246:web:a7098c58cc144c6ae1f1c7",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 </html>

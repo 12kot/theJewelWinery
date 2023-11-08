@@ -5,6 +5,7 @@
   padding-left: calc(var(--page-padding-left) / 2);
   padding-right: calc(var(--page-padding-left) / 2);
   gap: var(--gap);
+  overflow-x: hidden;
 }
 
 .category_cards {

@@ -15,6 +15,7 @@
 
 .page4 .category__list button {
   border: none;
+  transition: var(--transition)!important;
 }
 
 .page4 .category__list .active {
