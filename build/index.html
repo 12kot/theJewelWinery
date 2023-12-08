@@ -46,7 +46,9 @@
               We introduse exelent collection of white and red wines.<br />Feel
               the scent of sun and happiness.
             </p>
-            <a onclick="scrollToElement(philosophy)" class="linkToButton">DISCOVER MORE</a>
+            <a onclick="scrollToElement(philosophy)" class="linkToButton"
+              >DISCOVER MORE</a
+            >
           </div>
         </div>
       </section>
@@ -54,7 +56,11 @@
 
     <main class="page page2" id="philosophy">
       <section class="about">
-        <div class="about_text_container" data-aos="zoom-in" data-aos-offset="20">
+        <div
+          class="about_text_container"
+          data-aos="zoom-in"
+          data-aos-offset="20"
+        >
           <h2>Winemaking Philosophy</h2>
           <span class="main_border"></span>
         </div>
@@ -309,7 +315,9 @@
                 <p>Riesling</p>
               </li>
             </ul>
-            <a onclick="scrollToElement(products)" class="linkToButton">SHOP NOW</a>
+            <a onclick="scrollToElement(products)" class="linkToButton"
+              >SHOP NOW</a
+            >
           </div>
         </div>
       </div>
@@ -451,7 +459,9 @@
                 <p>Merlot</p>
               </li>
             </ul>
-            <a onclick="scrollToElement(products)" class="linkToButton">SHOP NOW</a>
+            <a onclick="scrollToElement(products)" class="linkToButton"
+              >SHOP NOW</a
+            >
           </div>
         </div>
       </div>
@@ -628,23 +638,28 @@
         <div class="review" data-aos="zoom-in" data-aos-offset="20">
           <h2 class="review__header">What Get People Saying</h2>
           <div class="review__avatars" id="reviews">
-            <img data-aos="fade-up"
+            <img
+              data-aos="fade-up"
               class="review__avatar review__active"
               src="assets/peopleAvatar2.jpg"
-              id="review0"
-              onclick="changeReview(0)"
-            />
-            <img data-aos="fade-up" data-aos-delay="50"
-              class="review__avatar"
-              src="assets/peopleAvatar1.jpg"
               id="review1"
               onclick="changeReview(1)"
             />
-            <img data-aos="fade-up" data-aos-delay="100"
+            <img
+              data-aos="fade-up"
+              data-aos-delay="50"
               class="review__avatar"
-              src="assets/peopleAvatar3.jpg"
+              src="assets/peopleAvatar1.jpg"
               id="review2"
               onclick="changeReview(2)"
+            />
+            <img
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="review__avatar"
+              src="assets/peopleAvatar3.jpg"
+              id="review3"
+              onclick="changeReview(3)"
             />
           </div>
           <div class="review__name" data-aos="fade-up">
@@ -661,9 +676,19 @@
             </blockquote>
           </div>
           <div class="review__select" id="review__select">
-            <span class="circle active" id="select0" data-aos="fade-up"></span>
-            <span class="circle" id="select1" data-aos="fade-up" data-aos-delay="50"></span>
-            <span class="circle" id="select2" data-aos="fade-up" data-aos-delay="100"></span>
+            <span class="circle active" id="select1" data-aos="fade-up"></span>
+            <span
+              class="circle"
+              id="select2"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            ></span>
+            <span
+              class="circle"
+              id="select3"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            ></span>
           </div>
         </div>
       </section>
@@ -671,7 +696,11 @@
 
     <main class="page page6">
       <section>
-        <div class="about_text_container" data-aos="zoom-in" data-aos-offset="20">
+        <div
+          class="about_text_container"
+          data-aos="zoom-in"
+          data-aos-offset="20"
+        >
           <h2>Jewel Blog</h2>
           <span class="main_border"></span>
         </div>
@@ -682,17 +711,29 @@
           <p class="blog__name">The History Of The Appearance Of Jewel Wine</p>
           <p class="blog__date">January 15 2023</p>
         </a>
-        <a href="blog/How-To-Choose-A-Quality-Wine.html" class="blog__item" data-aos="fade-up" data-aos-delay="50">
+        <a
+          href="blog/How-To-Choose-A-Quality-Wine.html"
+          class="blog__item"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
           <img class="blog__img" src="assets/blog2.jpg" />
           <p class="blog__name">How To Choose A Quality Wine</p>
           <p class="blog__date">May 21 2023</p>
         </a>
-        <a href="blog/Daily-Wine-News-In-Favor-of-Reds.html" class="blog__item" data-aos="fade-up" data-aos-delay="100">
+        <a
+          href="blog/Daily-Wine-News-In-Favor-of-Reds.html"
+          class="blog__item"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <img class="blog__img" src="assets/blog3.jpg" />
           <p class="blog__name">Daily Wine News: In Favor of Reds</p>
           <p class="blog__date">February 08 2023</p>
         </a>
-        <a data-aos="fade-up" data-aos-delay="150"
+        <a
+          data-aos="fade-up"
+          data-aos-delay="150"
           href="blog/Good-Barolo-Comes-To-Those-Who-Wait.html"
           class="blog__item"
         >
@@ -712,11 +753,32 @@
           news, events & promotions
         </p>
       </section>
-      <div class="subscribe" data-aos="zoom-in">
-        <input placeholder="Enter your email" type="email" />
-        <button>subscribe</button>
-      </div>
-      <a class="back_to_top" onclick="scrollToElement(main)" class="subscribe" data-aos="zoom-in">
+      <form
+        class="subscribe"
+        data-aos="zoom-in"
+        name="subscribeForm"
+        onsubmit="handleSubscribe(event)"
+      >
+        <input
+          placeholder="Enter your email"
+          class="email"
+          name="emailSubscribe"
+          type="email"
+        />
+        <input
+          placeholder="Enter your name"
+          class="name"
+          name="nameSuscribe"
+          type="text"
+        />
+        <button type="submit" id="submitSubscribe">subscribe</button>
+      </form>
+      <a
+        class="back_to_top"
+        onclick="scrollToElement(main)"
+        class="subscribe"
+        data-aos="zoom-in"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="24"
@@ -738,11 +800,21 @@
             >ONLINE STORE</a
           >
         </li>
-        <li data-aos="zoom-in" data-aos-delay="100"><a href="./blog/blog.html">OUR BLOG</a></li>
-        <li data-aos="zoom-in" data-aos-delay="150"><a href="./promotion.hmtl" target="_blank">PROMOTION</a></li>
-        <li data-aos="zoom-in" data-aos-delay="200"><a href="./privacy.html">PRIVACY POLICY</a></li>
-        <li data-aos="zoom-in" data-aos-delay="250"><a href="./termstouse.html">TERMS TO USE</a></li>
-        <li data-aos="zoom-in" data-aos-delay="300"><a href="./sitemap.html">SITEMAP</a></li>
+        <li data-aos="zoom-in" data-aos-delay="100">
+          <a href="./blog/blog.html">OUR BLOG</a>
+        </li>
+        <li data-aos="zoom-in" data-aos-delay="150">
+          <a href="./promotion.hmtl" target="_blank">PROMOTION</a>
+        </li>
+        <li data-aos="zoom-in" data-aos-delay="200">
+          <a href="./privacy.html">PRIVACY POLICY</a>
+        </li>
+        <li data-aos="zoom-in" data-aos-delay="250">
+          <a href="./termstouse.html">TERMS TO USE</a>
+        </li>
+        <li data-aos="zoom-in" data-aos-delay="300">
+          <a href="./sitemap.html">SITEMAP</a>
+        </li>
       </ul>
       <span class="big__border"></span>
     </nav>
@@ -995,7 +1067,7 @@
       offset: 30,
       duration: 300,
       easing: "ease",
-      once: false
+      once: false,
     });
   </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

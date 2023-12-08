@@ -1,28 +1,14 @@
-const Reviews = [
-  {
-    name: "Ekaterina Kuznecova",
-    work: "Designer, London",
-    text: " The Jewel is a luxurious wine with a complex flavor and a long finish. It is a blend of three of the world's most famous grapes, and it is aged for two years in French oak barrels. The wine is full-bodied and flavorful. It is a perfect wine for a special occasion or to enjoy on its own. ",
-  },
-  {
-    name: "Dmitry Fomichenok",
-    work: "Student, Harvard",
-    text: " The Jewel Collection is a line of wines from the Global Wine Group that offers a variety of red, white, and sparkling wines. The wines are known for their quality and affordability, and they are a great option for wine lovers of all levels. ",
-  },
-  {
-    name: "Mikita Yakaltsevich",
-    work: "The Jewel Founder, Helsinki",
-    text: " The Jewel: A wine to remember. The Jewel is a wine that is sure to impress. It is a full-bodied wine with a rich, complex flavor that is perfect for special occasions. I am proud to have created this wine, and I hope you enjoy it. ",
-  },
-];
-
-const changeReview = (reviewId) => {
+const changeReview = async (reviewId) => {
+  const Reviews = await getElements();
   setActive(`review${reviewId}`, "reviews", "review__active");
   setActive(`select${reviewId}`, "review__select", "active");
 
-  document.getElementById("reviewName").textContent = Reviews[reviewId].name;
-  document.getElementById("reviewWork").textContent = Reviews[reviewId].work;
-  document.getElementById("reviewText").textContent = Reviews[reviewId].text;
+  const review = Reviews.find((r) => +r.id === reviewId);
+
+  document.getElementById("reviewName").textContent = review.name;
+  document.getElementById("reviewWork").textContent =
+    review.work + ", " + review.city;
+  document.getElementById("reviewText").textContent = review.message;
 };
 
 const setActive = (activeRef, parentRef, handleClass) => {
@@ -39,7 +25,78 @@ const setActive = (activeRef, parentRef, handleClass) => {
 };
 
 const scrollToElement = (id) => {
-  console.log(id)
-  const node = document.getElementById(id);
+  console.log(id);
   if (id) id.scrollIntoView({ block: "start", behavior: "smooth" });
+};
+
+const handleSubscribe = async (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  let form = document.forms.subscribeForm;
+
+  const email = form.elements.emailSubscribe.value;
+  const name = form.elements.nameSuscribe.value;
+
+  if (!email) {
+    form.elements.emailSubscribe.classList.add("error");
+  } else {
+    form.elements.emailSubscribe.classList.remove("error");
+  }
+
+  if (!name) {
+    form.elements.nameSuscribe.classList.add("error");
+  } else {
+    form.elements.nameSuscribe.classList.remove("error");
+  }
+
+  if (await request(name, email)) {
+    form.elements.nameSuscribe.value = "";
+    form.elements.emailSubscribe.value = "";
+
+    document.getElementById("submitSubscribe").classList.add("done");
+    setTimeout(() => {
+      document.getElementById("submitSubscribe").classList.remove("done");
+    }, 5000);
+  } else {
+    document.getElementById("submitSubscribe").classList.add("error__button");
+    setTimeout(() => {
+      document.getElementById("submitSubscribe").classList.remove("error__button");
+    }, 5000);
+  }
+};
+
+const request = async (name, email) => {
+  try {
+
+    let data;
+    if (!!email && !!name)
+    data = await fetch("http://localhost/myproject/post.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+      }),
+    });
+    
+    return !!data?.ok;
+  } catch {
+    return false;
+  }
+};
+
+const getElements = async () => {
+  try {
+    const response = await fetch("http://localhost/myproject/get.php", {
+      method: "GET",
+    });
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error:", error);
+  }
 };
